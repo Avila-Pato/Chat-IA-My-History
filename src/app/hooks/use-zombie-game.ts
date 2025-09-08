@@ -6,6 +6,10 @@ export function useZombieGame() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    startGame();
+  }, []);
+
   const startGame = async () => {
     setIsLoading(true);
 

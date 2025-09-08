@@ -2,12 +2,12 @@ export interface GameMessage {
     id: string;
     role: 'user' | 'assistant';
     content:  string;
-    image?: string;
+    image?: GeneratedImage;
     imageLoading?: boolean;
 }
 
 export interface GeneratedImage {
-    base64: string;
+    base64Data: string;
     mediaType: string;
     uint8ArrayData?: Uint8Array;
 }
