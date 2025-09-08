@@ -26,7 +26,7 @@ export function GameInput({ input, onInputChange, onSubmit, isLoading }: GameInp
             />
             <PromptInputSubmit
                 disabled={inputSubmitIsDisavled} 
-                className="absolute right-2 bottom-2"
+                className="absolute right-2 bottom-2 cursor-pointer"
             />
         </PromptInput>
     )

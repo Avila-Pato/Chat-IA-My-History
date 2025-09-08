@@ -32,10 +32,10 @@ export default function Home() {
             ))}
             {isLoading && <GameLoader />}
           </ConversationContent>
-          <ConversationScrollButton />
+          <ConversationScrollButton  className="cursor-pointer"/>
         </Conversation>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl w-full mx-auto">
           <GameInput
             input={input}
             onInputChange={handleInputChange}
