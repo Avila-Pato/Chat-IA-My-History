@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { text } = await generateText({
-      model: google("gemini-2.5-flash"), // 👈 La Api key debe estar en .env ai.dev
+      model: google("gemini-2.5-flash-lite"), // 👈 La Api key debe estar en .env ai.dev
       prompt,
     });
 

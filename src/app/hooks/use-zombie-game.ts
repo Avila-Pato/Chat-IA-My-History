@@ -134,7 +134,7 @@ export function useZombieGame() {
     }
   };
   // Función para manejar los cambios en el input
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);
   };
 
