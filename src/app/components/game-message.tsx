@@ -3,7 +3,7 @@ import { type GameMessage as GameMessageType } from "@/lib/types";
 import { Image } from "@/components/ai-elements/image";
 import { Response } from "@/components/ai-elements/response";
 import { Loader } from "@/components/ai-elements/loader";
-import { UI_MESSAGES } from "@/lib/consts";
+// import { UI_MESSAGES } from "@/lib/consts";
 
 export function GameMessage({ message }: { message: GameMessageType }) {
   const { role, content, image, imageLoading } = message;
@@ -13,13 +13,12 @@ export function GameMessage({ message }: { message: GameMessageType }) {
     <Message from={role}>
       <MessageContent>
         {role === "assistant" && (
-          <picture className=" w-full max-w-2xl aspect-video overflow-hidden rounded-md">
-            {imageLoading && (
-              <div className="w-full h-full flex items-center justify-center bg-black/10">
-                <div className="flex mb-4 space-x-2">
-                  <Loader />
-                  <span>{UI_MESSAGES.LOADING.IMAGE}</span>
-                </div>
+          <picture className=" w-full max-w-2xl aspect-video overflow-hidden rounded-md relative">
+            {imageLoading && !image && (
+              <div className="absolute inset-0 bg-gray-300 animate-pulse flex items-center justify-center rounded-md">
+                <span className="text-gray-500">
+                  <Loader size={16}/>
+                </span>
               </div>
             )}
             {image && (

@@ -12,6 +12,9 @@ import {
 } from "@/components/ai-elements/conversation";
 import { GameInput } from "./components/game-input";
 
+
+
+
 export default function Home() {
   const {
     messages,
@@ -30,7 +33,10 @@ export default function Home() {
             {messages.map((message) => (
               <GameMessage key={message.id} message={message} />
             ))}
+            
+
             {isLoading && <GameLoader />}
+
           </ConversationContent>
           <ConversationScrollButton  className="cursor-pointer"/>
         </Conversation>
